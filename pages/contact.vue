@@ -96,14 +96,11 @@
           ></v-checkbox>
         </ValidationProvider>
 
-        <div class="level">
-          <div class="level-right"></div>
-          <div class="level-left">
-            <v-btn class="mr-4" @click="clear"> Clear </v-btn>
-            <v-btn type="submit" :disabled="invalid" :loading="buttonLoading">
-              Submit
-            </v-btn>
-          </div>
+        <div class="d-flex justify-end">
+          <v-btn class="mr-4" @click="clear"> Clear </v-btn>
+          <v-btn type="submit" :disabled="invalid" :loading="buttonLoading">
+            Submit
+          </v-btn>
         </div>
       </form>
     </ValidationObserver>
