@@ -1,7 +1,12 @@
 import colors from 'vuetify/es5/util/colors'
 
-const HTTP_HOST = '0.0.0.0'
-const PORT = 3000
+const {
+  NODE_ENV,
+  HTTP_HOST, // http server host and port
+  HTTP_PORT,
+} = process.env
+
+console.log(process.env.TEST)
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -28,7 +33,11 @@ export default {
 
   server: {
     host: HTTP_HOST || '127.0.0.1',
-    port: PORT || 3000,
+    port: HTTP_PORT || 3000,
+  },
+
+  env: {
+    NODE_ENV: NODE_ENV || 'development',
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
